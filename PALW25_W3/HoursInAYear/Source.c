@@ -7,7 +7,8 @@
 
 #include <stdio.h>
 
-#define MINUTES_IN_HOUR 60 // what are we doing here? is this good practice?
+// Defined / fixed / constant value
+#define MINUTES_IN_HOUR 60 // what are we doing here? is this good practice? yes.
 
 int main(void)
 {
