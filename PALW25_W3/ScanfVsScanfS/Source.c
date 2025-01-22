@@ -6,6 +6,10 @@
 // 1.0			01/11/2025		initial
 
 #define _CRT_SECURE_NO_WARNINGS // what are we doing here? (it isn't as scary as it seems)
+// scanf is unsafe
+// scanf_s (_s means secure) better version
+	// This piece of code will not run everywhere
+	// Developed by Microsoft, can only run in Windows Debuggers
 
 #include <stdio.h>
 
@@ -15,7 +19,7 @@ int main(void)
 	int dogs;
 
 	printf("How many cats do you have?\n");
-	scanf("%d", &cats); // bonus: what is this green squiggle line indicating?
+	scanf("%d", &cats);
 	printf("Oh, so you have %d cat(s)!\n", cats);
 
 	printf("Now...how many dogs do you have?\n");
