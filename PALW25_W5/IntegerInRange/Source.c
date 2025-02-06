@@ -27,7 +27,12 @@ int main(void)
 	do
 	{
 		printf("Please enter an integer in the 0-2^16 range: ");
+
+#ifdef _WIN32
 		int symbols_returned = scanf_s("%d", &num); // review - what does _s indicate? 
+#else
+		int symbols_returned = scanf("%d", &num);
+#endif
 
 		if (symbols_returned != 1) // what does this check for?
 		{
