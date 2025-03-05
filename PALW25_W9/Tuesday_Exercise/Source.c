@@ -2,9 +2,11 @@
 // 
 // 
 // 
-// Using the defined Player structure from the previous example, create a data file with 12 players.
+// Using the defined Player structure from the previous example, create a data file with 12 players (as long as its more than one player).
 // Create a program that will read these 12 players into a collection of your choice and display it to the standard output stream.
 // CHALLENGE: You cannot access / modify the members of the Player structure directly(e.g., p1.id = 1).
+// 
+// NOTE: at least try to read one player (the opposite of ADTFileIO)
 // 
 // 
 // 

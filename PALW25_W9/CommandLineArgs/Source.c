@@ -13,6 +13,9 @@
 #define MAXLINE 512
 
 // what is going on here?
+// command-line arguments
+// argc --> argument count
+// agrv --> argument values
 int main(int argc, char* argv[])
 {
 	char line[MAXLINE]; // to read line by line from a file with a predetermined size

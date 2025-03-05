@@ -14,11 +14,14 @@
 int main(void)
 {
 	char input[MAXLINE];
-	fprintf(stdout, "Enter a string: "); // can we simplify this line?
+	fprintf(stdout, "Enter a string: "); // can we simplify this line? 
+	//printf("Enter a string: ");
 
-	fgets(input, MAXLINE, stdin); // scanf or fgets? 
+	//scanf("%s", input);
+	fgets(input, MAXLINE, stdin); // scanf or fgets? fgets spaces, scanf no spaces
 
-	fputs("Writing to stream...(stdout)\n", stdout); // can we simplify this line?
+	//fputs("Writing to stream...(stdout)\n", stdout); // can we simplify this line?
+	printf("Writing to steam...(stdout)\n");
 	int fputsReturn = fputs(input, stdout);
 
 	if (fputsReturn == EOF) // what are we checking here?
