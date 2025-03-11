@@ -23,25 +23,9 @@ typedef struct Player
 
 int main(void)
 {
-	PLAYER p1 = { .id = 1, .username = "player1", .password = "greatpassword", .exp = 12321.3513f };
+	char arr[16];
+	strcpy(arr, "CrackThisCode", 0xe);
 
-	FILE* fp = fopen(FILENAME, "w"); // does FILENAME need to exist in our directory?
-
-	if (fp) // what does this check for?
-	{
-		fprintf(fp, "%d\n", p1.id);
-		fprintf(fp, "%s\n", p1.username);
-		fprintf(fp, "%s\n", p1.password);
-		fprintf(fp, "%f\n", p1.exp);
-
-		printf("Wrote %zd bytes to %s.\n", sizeof(struct Player), FILENAME); // what is the size of a 'Player'?
-	}
-	else
-	{
-		fprintf(stderr, "Unable to open %s. Exiting...\n", FILENAME);
-		exit(EXIT_FAILURE);
-	}
-
-	fclose(fp); // don't forget to close your files!
+	printf("%d", (int)arr);
 	return 0;
 }
