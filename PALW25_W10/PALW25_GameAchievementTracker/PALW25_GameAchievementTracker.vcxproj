@@ -130,11 +130,13 @@
     <ClCompile Include="Achievement.c" />
     <ClCompile Include="Color.c" />
     <ClCompile Include="Source.c" />
+    <ClCompile Include="Utilities.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Achievement.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="Globals.h" />
+    <ClInclude Include="Utilities.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="achievements_data_file.txt" />

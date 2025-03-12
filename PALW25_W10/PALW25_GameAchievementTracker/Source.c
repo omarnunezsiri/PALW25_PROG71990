@@ -10,11 +10,15 @@
 #include "Achievement.h"
 #include "Color.h"
 
+#define ACHIEVEMENTS_DATA_FILE "achievements_data_file.txt"
+
 #define SAMPLE_ACHIEVEMENTS_COUNT 5  // to simplify this exercise we will read only 5 achievements (instead of 35) for now
 
 int main(void)
 {
 	/* DO NOT EDIT THIS SECTION */
+	int err_code = 0;
+
 	MintGreen();
 	printf("\t--------------------------------------\n");
 	printf("\t|                                    |\n");
@@ -29,12 +33,30 @@ int main(void)
 
 
 	/* USER CODE */
-	ACHIEVEMENT achievements[SAMPLE_ACHIEVEMENTS_COUNT];
 
 	// Read achievements
 	// Ideally display them
 
-	return 0;
+	ACHIEVEMENT achievement;
+
+	if (ReadAchievementFromFile(ACHIEVEMENTS_DATA_FILE, &achievement))
+	{
+		char name[MAX_NAME];
+		char desc[MAX_DESC];
+
+		if (GetAchievementName(achievement, name) && GetAchievementDescription(achievement, desc))
+		{
+			printf("\n%d (unlocked?) ---> %s (name) ---> %s (desc)\n", GetAchievementUnlocked(achievement), name,
+				desc);
+		}
+	}
+	else
+	{
+		err_code = 1;
+	}
+
+	/* DO NOT EDIT THIS SECTION */
+	return err_code;
 }
 
 
