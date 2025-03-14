@@ -37,7 +37,7 @@ int main(void)
 	// Read achievements
 	// Ideally display them
 
-	ACHIEVEMENT achievement;
+	/*ACHIEVEMENT achievement;
 
 	if (ReadAchievementFromFile(ACHIEVEMENTS_DATA_FILE, &achievement))
 	{
@@ -49,10 +49,36 @@ int main(void)
 			printf("\n%d (unlocked?) ---> %s (name) ---> %s (desc)\n", GetAchievementUnlocked(achievement), name,
 				desc);
 		}
+		else
+		{
+			err_code = 1;
+		}
+	}
+	else
+	{
+		err_code = 2;
+	}*/
+
+	// Display hard-coded achievement
+	// Write to file
+	ACHIEVEMENT achievement = { true, "Achievement 1", "This is the first achievement" };
+
+	char name[MAX_NAME];
+	char desc[MAX_DESC];
+
+	if (GetAchievementName(achievement, name) && GetAchievementDescription(achievement, desc))
+	{
+		printf("\n%d (unlocked?) ---> %s (name) ---> %s (desc)\n", GetAchievementUnlocked(achievement), name,
+			desc);
 	}
 	else
 	{
 		err_code = 1;
+	}
+
+	if (!WriteAchievementToFile(ACHIEVEMENTS_DATA_FILE, achievement))
+	{
+		err_code = 2;
 	}
 
 	/* DO NOT EDIT THIS SECTION */

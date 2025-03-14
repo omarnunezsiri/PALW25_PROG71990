@@ -120,4 +120,23 @@ bool ReadAchievementFromFile(char* filename, PACHIEVEMENT pAchievement)
 	return read;
 }
 
-bool WriteAchievementToFile(char*, ACHIEVEMENT);
+bool WriteAchievementToFile(char* filename, ACHIEVEMENT achievement)
+{
+	bool written = false;
+
+	FILE* fpWrite = fopen(filename, "w");
+
+	if (fpWrite != NULL)
+	{
+		fprintf(fpWrite, "%s\n", achievement.unlocked ? UNLOCKED_STR : NOT_UNLOCKED_STR);
+		fprintf(fpWrite, "%s\n", achievement.name);
+		fprintf(fpWrite, "%s\n", achievement.description);
+		written = true;
+	}
+	else
+	{
+		fprintf(stderr, "Error opening file %s", filename);
+	}
+
+	return written;
+}
