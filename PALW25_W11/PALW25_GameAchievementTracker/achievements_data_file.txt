@@ -1,0 +1,27 @@
+YES
+Achievement 1
+This is the first achievement
+NO
+Achievement 2
+This is the second achievement
+NO
+Achievement 3
+This is the third achievement
+YES
+Achievement 4
+This is the fourth achievement
+YES
+Achievement 5
+This is the fifth achievement
+NO
+Achievement 6
+This is the sixth achievement
+YES
+Achievement 7
+This is the seventh achievement
+NO
+Achievement 8
+This is the eighth achievement
+YES
+Achievement 9
+This is the ninth achievement
