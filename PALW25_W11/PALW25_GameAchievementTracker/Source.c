@@ -1,4 +1,4 @@
-// PAL W25 - Game Achievement Tracker
+﻿// PAL W25 - Game Achievement Tracker
 // 
 //		Source file
 // 
@@ -94,7 +94,12 @@ int main(void)
 * Prompt 3/11/2025
 * Write a program that reads information about Game Achievement from a plaintext file
 * Use a pointer (pass by reference) to edit any member of the Achievement, that is, 
-* you must NOT edit the ADT directly (using the dot �.� notation).
+* you must NOT edit the ADT directly (using the dot “.” notation).
 * Design functions that will set and get attributes of an Achievement
 * 
+* 
+* Prompt 3/18/2025
+* Continue our Game Achievement Tracker application, lets implement the Game ADT with a list of Achievements​
+* For now, we want to focus on adding new Achievements to the Game and displaying them back to console. ​
+* We will implement removing, updating, saving to database as well as loading from one on the next sessions!
 */
