@@ -16,12 +16,20 @@
 /*
 *
 * DMM (Dynamic Memory Management)
+* 
+* - malloc (memory allocation)
+* - calloc (memory allocation but initializes to 0)
+* - realloc (reallocate/resize memory)
+* - free
 *
 */
 
 int main(void)
 {
-	int* pInt = (int*)malloc(sizeof(int)); // dynamically allocating an integer
+	int* array = (int*)malloc(1000000000 * sizeof(int));
+	free(array);
+
+	int* pInt = (int*)calloc(1, sizeof(int)); // dynamically allocating an integer
 	if (!pInt) // error checking, remember from linked lists?
 	{
 		fprintf(stderr, "Error allocating pInt. Exiting...\n");
@@ -30,7 +38,7 @@ int main(void)
 
 	printf("\n pInt:%d \n", *pInt); // what will this display? how can we fix it?
 
-	int* pAnotherInt = (int*)malloc(5 * sizeof(int));
+	int* pAnotherInt = (int*)calloc(5, sizeof(int));
 	if (!pAnotherInt)
 	{
 		fprintf(stderr, "Error allocating pAnotherInt. Exiting...\n");
@@ -62,7 +70,7 @@ int main(void)
 		exit(EXIT_FAILURE);
 	}
 
-	strcat(string, " Nunez Siri");
+	strcat(string, " Nunez Siri"); // string concatenation ("First String" + " Second String" = "First String Second String")
 	printf("\n realloced string: %s \n", string); // What will this display?
 
 	printf("string: %p and pString: %p \n", string, pString);
