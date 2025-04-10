@@ -10,11 +10,11 @@
 
 long long factorial(long long num)
 {
-	if (num == 1) // base case
+	if (num == 1)
 	{
 		return num;
 	}
-	else // recursive case
+	else
 	{
 		return num * factorial(num - 1);
 	}

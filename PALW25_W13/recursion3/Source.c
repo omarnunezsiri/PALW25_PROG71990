@@ -9,7 +9,7 @@
 #include <stdio.h>
 int power(int base, int exponent)
 {
-	if (exponent == 0) // base case
+	if (exponent == 0)
 	{
 		return 1;
 	}

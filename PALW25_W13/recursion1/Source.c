@@ -13,13 +13,13 @@ void CountDownOnwards(int number)
 {
 	printf("%d\n", number);
 
-	if (number == 0) // base case
+	if (number == 0)
 	{
 		printf("We reached the bottom of the count!\n");
 	}
-	else // recursive case
+	else
 	{
-		CountDownOnwards(number - 1); // recursive call
+		CountDownOnwards(number - 1);
 	}
 }
 

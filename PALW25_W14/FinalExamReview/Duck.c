@@ -29,6 +29,19 @@ void SetFlyBehaviour(PDUCK duck, char* fly)
 	strcpy(duck->flyBehaviour, fly);
 }
 
+bool SetDuckAge(PDUCK pduck, int age)
+{
+	bool set = false;
+
+	if (age >= 0 && age <= 14)
+	{
+		pduck->age = age;
+		set = true;
+	}
+
+	return set;
+}
+
 bool GetFlyFlag(DUCK duck)
 {
 	return duck.fly;

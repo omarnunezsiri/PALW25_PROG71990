@@ -8,6 +8,7 @@ typedef struct Duck {
 	bool quack;
 	char quackBehaviour[MAXSTR];
 	char flyBehaviour[MAXSTR];
+	int age; // 0-14
 }DUCK, * PDUCK;
 
 void SetFlyFlag(PDUCK, bool);
@@ -15,6 +16,7 @@ void SetSwimFlag(PDUCK, bool);
 void SetQuackFlag(PDUCK, bool);
 void SetQuackBehaviour(PDUCK, char*);
 void SetFlyBehaviour(PDUCK, char*);
+bool SetDuckAge(PDUCK, int);
 
 bool GetFlyFlag(DUCK);
 bool GetSwimFlag(DUCK);

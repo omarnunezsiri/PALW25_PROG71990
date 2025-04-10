@@ -28,15 +28,25 @@ int main(void)
 		exit(EXIT_FAILURE);
 	}
 
-	// Creates a few random ducks!s
+	// Creates a few random ducks
 	for (int i = 0; i < COUNT_DUCKS; i++)
 	{
 		SetFlyFlag(&(ducks[i]), booleans[i]);
 		SetQuackFlag(&(ducks[i]), booleans[i]);
 		SetSwimFlag(&(ducks[i]), true); // all ducks can swim
 
+		if (!SetDuckAge(&(ducks[i]), 15))
+		{
+			printf("duck age not set\n");
+		}
+
 		SetQuackBehaviour(&(ducks[i]), quackBehaviours[i]);
 		SetFlyBehaviour(&(ducks[i]), flyBehaviours[i]);
+	}
+
+	for (int i = 0; i < COUNT_DUCKS; i++)
+	{
+		DisplayDuck(ducks[i]);
 	}
 
 	printf("\n ---------------- Ducks ---------------- \n");
